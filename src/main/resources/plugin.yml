@@ -1,7 +1,7 @@
 name: WormholeXTreme
 main: de.luricos.bukkit.WormholeXTreme.Wormhole.WormholeXTreme
-version: 1.1
-authors: [Lologarithm, alron, lycano]
+version: 1.2
+authors: [Lologarithm, alron, lycano, Zytharian]
 softdepend: [PermissionsEx, WormholeXTremeWorlds, Help]
 description: >
              Wormhole X-Treme! Wormholes as travel portals. Splash Effect, IDC,
