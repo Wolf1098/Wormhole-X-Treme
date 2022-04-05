@@ -1,6 +1,6 @@
 Wormhole X-Treme v1.2
 
-Up-to-date for Minecraft 1.13!
+Up-to-date for Minecraft 1.15.2!
 Depends on the Spigot API and requires Java 8
 
 NOTE: instructions below are currently outdated. The best way to install is to
