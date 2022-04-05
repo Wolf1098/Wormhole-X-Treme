@@ -1775,7 +1775,7 @@ public class StargateHelper {
      */
     private static boolean tryCreateGateSign(final Block signBlock, final Stargate tempGate) {
         WXTLogger.prettyLog(Level.FINE, false, "Trying to create GateSign for gate '" + tempGate.getGateName() + "' in '" + tempGate.getGateWorld().getName() + "'");
-        if (signBlock.getType().equals(Material.WALL_SIGN)) {
+        if (signBlock.getType().equals(Material.LEGACY_WALL_SIGN)) {
             tempGate.setGateSignPowered(true);
             tempGate.setGateDialSignBlock(signBlock);
             tempGate.setGateDialSign((Sign) signBlock.getState());

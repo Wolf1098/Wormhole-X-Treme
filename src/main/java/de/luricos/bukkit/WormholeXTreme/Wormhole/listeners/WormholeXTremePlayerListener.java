@@ -331,7 +331,7 @@ public class WormholeXTremePlayerListener implements Listener {
             if (buttonLeverHit(player, clickedBlock, null)) {
                 return true;
             }
-        } else if ((clickedBlock != null) && (clickedBlock.getType().equals(Material.WALL_SIGN))) {
+        } else if ((clickedBlock != null) && (clickedBlock.getType().equals(Material.LEGACY_WALL_SIGN))) {
             //@TODO refactor permission levels to be able to check for permissions first
             Stargate stargate = StargateManager.getGateFromBlock(clickedBlock);
             if (stargate != null) {

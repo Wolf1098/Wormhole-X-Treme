@@ -1098,7 +1098,7 @@ public class Stargate {
             return;
 
         BlockState signState = getGateDialSignBlock().getState();
-        signState.setType(Material.WALL_SIGN);
+        signState.setType(Material.LEGACY_WALL_SIGN);
         signState.setRawData(WorldUtils.getSignFacingByteFromBlockFace(getGateFacing()));
         signState.update(true, false);
         
@@ -1689,7 +1689,7 @@ public class Stargate {
                 getGateStructureBlocks().add(nameSign.getLocation());
                 
                 BlockState signState = nameSign.getState();
-                signState.setType(Material.WALL_SIGN);
+                signState.setType(Material.LEGACY_WALL_SIGN);
                 signState.setRawData(WorldUtils.getSignFacingByteFromBlockFace(getGateFacing()));
                 signState.update(true, false);
                 
@@ -1707,7 +1707,7 @@ public class Stargate {
 
             } else {
                 final Block nameSign = getGateNameBlockHolder().getRelative(getGateFacing());
-                if (nameSign.getType().equals(Material.WALL_SIGN)) {
+                if (nameSign.getType().equals(Material.LEGACY_WALL_SIGN)) {
                     getGateStructureBlocks().remove(nameSign.getLocation());
                     nameSign.setType(Material.AIR);
                 }
@@ -1955,7 +1955,7 @@ public class Stargate {
         synchronized (getGateNetwork().getNetworkGateLock()) {
 
         	BlockState signState = getGateDialSignBlock().getState();
-            signState.setType(Material.WALL_SIGN);
+            signState.setType(Material.LEGACY_WALL_SIGN);
             signState.setRawData(WorldUtils.getSignFacingByteFromBlockFace(getGateFacing()));
             signState.update(true, false);
 
@@ -1965,7 +1965,7 @@ public class Stargate {
                     setGateDialSign((Sign) getGateDialSignBlock().getState());
 
                 // though it may still happen that the block is changed to something else than a sign
-                if (!(getGateDialSign().getType().equals(Material.WALL_SIGN)))
+                if (!(getGateDialSign().getType().equals(Material.LEGACY_WALL_SIGN)))
                     throw new WormholeDialSignException("Expected WALL_SIGN. Found '" + getGateDialSign().getType().name() + "' for gate '" + getGateName() + "' in world '" + getWorld().getName() + "'.");
             } catch (ClassCastException e) {
                 throw new WormholeDialSignException("Could not set DialSign for gate '" + getGateName() + "' in world '" + getWorld().getName() + "'. Cast State to Sign failed for BlockType '" + getGateDialSignBlock().getType().name() + "'");
@@ -2189,7 +2189,7 @@ public class Stargate {
     
     public boolean tryClickTeleportSign(Block clickedBlock, Action eventAction, String triggeredByPlayer) {
         if ((getGateDialSign() == null) && (getGateDialSignBlock() != null)) {
-            if (getGateDialSignBlock().getType().equals(Material.WALL_SIGN)) {
+            if (getGateDialSignBlock().getType().equals(Material.LEGACY_WALL_SIGN)) {
                 setGateDialSignIndex(-1);
 
                 //@TODO can be removed after long term test, only nuke sign on load

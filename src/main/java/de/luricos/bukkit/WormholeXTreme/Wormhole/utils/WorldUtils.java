@@ -182,7 +182,7 @@ public class WorldUtils {
      * @return the byte
      */
     public static byte getSignFacingByteFromBlockFace(final BlockFace blockFace) {
-        Sign signFacing = new Sign(Material.WALL_SIGN);
+        Sign signFacing = new Sign(Material.LEGACY_WALL_SIGN);
         signFacing.setFacingDirection(blockFace);
 
         return signFacing.getData();
