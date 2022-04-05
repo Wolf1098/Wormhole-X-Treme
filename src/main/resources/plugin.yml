@@ -6,7 +6,8 @@ softdepend: [PermissionsEx, WormholeXTremeWorlds, Help]
 description: >
              Wormhole X-Treme! Wormholes as travel portals. Splash Effect, IDC,
              Iris, configurable Wormhole materials, and much much more.
-             
+
+api-version: "1.13"
 commands:
    dial:
      description: Dial a remote Stargate, unlock IDC with optional password 
